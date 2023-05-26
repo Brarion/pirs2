@@ -116,8 +116,8 @@ const Home: React.FC<
                 </button>
               </div>
               <div>
-                <Image src={Mail} alt="rcm@reliab.tech" height={12} />
-                <a href="mailto:rcm@reliab.tech">rcm@reliab.tech</a>
+                <Image src={Mail} alt="info@pirs.tech" height={12} />
+                <a href="mailto:info@pirs.tech">info@pirs.tech</a>
               </div>
             </div>
           </footer>

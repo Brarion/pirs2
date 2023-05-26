@@ -23,15 +23,15 @@ const EnglishText = () => (
     <h1>Consent to the processing of personal data</h1>
     <p>
       I, filling out the form on the site{' '}
-      <a href="https://pirs.tech/en/">rcm.reliab.tech/en/</a> , give my consent
+      <a href="https://pirs.tech/en/">pirs.tech/en/</a> , give my consent
       to the administrator of the site{' '}
-      <a href="https://pirs.tech/en/">rcm.reliab.tech/en/</a> , in accordance
+      <a href="https://pirs.tech/en/">pirs.tech/en/</a> , in accordance
       with the Federal Law of July 27, 2006, 152-ФЗ On Personal Data, for the
       processing, storage and transfer to third parties of my personal data via
       the Internet. I confirm that I give such consent, acting of my own free
       will and in my interest. The purpose of my personal data is to establish
       communication with the site administrator{' '}
-      <a href="https://pirs.tech/en/">rcm.reliab.tech/en/</a> , including
+      <a href="https://pirs.tech/en/">pirs.tech/en/</a> , including
       sending notifications, inquiries regarding the use of the site, the
       provision of services. I hereby acknowledge and confirm that I myself and
       completely bear responsibility for the personal data I have provided,
@@ -77,7 +77,7 @@ const EnglishText = () => (
     <p>
       Please note that the withdrawal of consent to the processing of personal
       data entails the deletion of your account from the Internet site (
-      <a href="https://pirs.tech/en/">rcm.reliab.tech/en/</a>), as well as the
+      <a href="https://pirs.tech/en/">pirs.tech/en/</a>), as well as the
       destruction of records containing your personal data in the personal data
       processing systems of PIRS LLC, which may make it impossible to use the
       Internet services of PIRS LLC
@@ -100,15 +100,15 @@ const RussianText = () => (
   <>
     <h1>Согласие на обработку персональных данных</h1>
     <p>
-      Я, заполняя форму на сайте <a href="https://pirs.tech">rcm.reliab.tech</a>
+      Я, заполняя форму на сайте <a href="https://pirs.tech">pirs.tech</a>
       , даю свое согласие администратору сайта{' '}
-      <a href="https://pirs.tech">rcm.reliab.tech</a>, в соответствии с
+      <a href="https://pirs.tech">pirs.tech</a>, в соответствии с
       Федеральным законом от 27.07.2006 152-ФЗ «О персональных данных», на
       обработку, хранение и передачу третьим лицам через Интернет моих
       персональных данных. Я подтверждаю, что, даю такое согласие, действуя по
       своей воле и в своем интересе. Целью предоставления мною персональных
       данных является установление связи с администратором сайта{' '}
-      <a href="https://pirs.tech">rcm.reliab.tech</a>, включая направление
+      <a href="https://pirs.tech">pirs.tech</a>, включая направление
       уведомлений, запросов, касающихся использования сайта, оказания услуг.
       Настоящим, я признаю и подтверждаю, что я самостоятельно и полностью несу
       ответственность за предоставленные мною персональные данные, включая их
@@ -155,7 +155,7 @@ const RussianText = () => (
     <p>
       Обращаем ваше внимание, что отзыв согласия на обработку персональных
       данных влечёт за собой удаление Вашей учётной записи с Интернет-сайта (
-      <a href="https://pirs.tech">rcm.reliab.tech</a>), а также уничтожение
+      <a href="https://pirs.tech">pirs.tech</a>), а также уничтожение
       записей, содержащих ваши персональные данные, в системах обработки
       персональных данных ООО «ПИРС», что может сделать невозможным пользование
       интернет-сервисами ООО «ПИРС»
