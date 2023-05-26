@@ -504,5 +504,63 @@ export const en = {
         },
       }
     }
+  },
+  title: {
+    main: {
+      title: 'Development of software and technical systems and complexes for business'
+    },
+    about: {
+      title: 'About the Pierce Сompany'
+    },
+    services: {
+      title: 'Products and services - Pierce Company'
+    },
+    portfolio: {
+      title: 'Portfolio - Pierce Company'
+    },
+    contacts: {
+      title: 'Contacts of Pierce Company'
+    },
+    vnedrenie: {
+      title: 'Software Development and Deployment - Pierce Company'
+    },
+    navigator: {
+      title: 'RCM: Navigator - Pierce Company'
+    },
+    education: {
+      title: 'RCM Methodology Training - Pierce Company'
+    },
+    analiz: {
+      title: 'RCM analysis - Pierce Company'
+    }
+  },
+  description: {
+    main: {
+      title: 'We offer development of applications of any complexity taking into account the needs and peculiarities of your business. We provide services for upgrading, testing and maintenance of software in various areas'
+    },
+    about: {
+      title: 'Features of work and services offered by the company Pierce. Development of applications of any complexity taking into account the needs and peculiarities of the client\'s business ☎️ For all questions please call: 8(800)555-30-53'
+    },
+    services: {
+      title: 'The offered services and products of the company Pierce. Development of software and technical systems and complexes in the sphere of production, retail, medicine, finance, transport and logistics ☎️ Call: 8(800)555-30-53'
+    },
+    portfolio: {
+      title: 'Pierce\'s finished projects. We provide services for software upgrade, testing and maintenance in various areas ☎️ Call: 8(800)555-30-53'
+    },
+    contacts: {
+      title: 'Pierce company contact details. Address, phone number, feedback form, working hours ☎️ For all questions call 8(800)555-30-53 or e-mail rcm@reliab.tech'
+    },
+    vnedrenie: {
+      title: 'Software Development and Deployment from the company Pierce. Development of applications of any complexity taking into account the needs and peculiarities of the client\'s business ☎️ For all questions call: 8(800)555-30-53'
+    },
+    navigator: {
+      title: 'RCM: Navigator from the company Pierce. Development of applications of any complexity taking into account the needs and peculiarities of the client\'s business ☎️ For all questions call: 8(800)555-30-53'
+    },
+    education: {
+      title: 'RCM Methodology Training from the company Pierce. Development of applications of any complexity taking into account the needs and peculiarities of the client\'s business ☎️ For all questions call: 8(800)555-30-53'
+    },
+    analiz: {
+      title: 'RCM analysis from the company Pierce. Development of applications of any complexity taking into account the needs and peculiarities of the client\'s business ☎️ For all questions call: 8(800)555-30-53'
+    }
   }
 };
