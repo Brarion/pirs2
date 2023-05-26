@@ -1,0 +1,23 @@
+@import "@styles/media";
+
+.fake {
+  background: url("./assets/shad.png") repeat-x top left;
+  width: 100vw;
+  height: 293px;
+  opacity: 0.5;
+
+  position: absolute;
+  left: 0;
+
+  @include tablet {
+    left: calc(-1 * (100vw - 750px) / 2);
+  }
+
+  @include desktop {
+    left: calc(-1 * (100vw - 970px) / 2);
+  }
+
+  @include desktop2k {
+    left: calc(-1 * (100vw - 1170px) / 2);
+  }
+}

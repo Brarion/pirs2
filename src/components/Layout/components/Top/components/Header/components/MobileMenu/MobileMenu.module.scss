@@ -1,0 +1,132 @@
+.modal {
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+
+  top: 0;
+  left: -100vw;
+
+  z-index: 1000;
+
+  transition: left 0.6s ease-in-out;
+
+  background: linear-gradient(135deg, #a0a0a0 0%, #727272 100%);;
+
+  &.opened {
+    left: 0;
+  }
+
+  > header {
+    width: 100%;
+    height: 76px;
+
+    background-color: #666666;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    > button {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  > main {
+    height: calc(100vh - 76px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .center {
+      .list {
+        padding: 0 40px;
+
+        display: flex;
+        flex-direction: column;
+
+        > div {
+          padding-left: 40px;
+
+          display: flex;
+          flex-direction: column;
+        }
+
+        > a, > div > a {
+          height: 53px;
+          width: 100%;
+          cursor: pointer;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          color: white;
+
+          text-transform: uppercase;
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 16px;
+          line-height: 22px;
+
+          text-decoration: none;
+          border-bottom: 1px solid #aaa4a0;
+        }
+      }
+
+      > *:last-child {
+        padding-left: 40px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 10px;
+
+        > button {
+          outline: none;
+          border: none;
+          color: white;
+
+          font-size: 20px;
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          background-color: transparent;
+
+          cursor: pointer;
+
+          &:hover {
+            color: #DDDDDD;
+            border-bottom: 2px solid white;
+          }
+
+          &.isActive {
+            border-bottom: 2px dotted white;
+
+            &:hover {
+              border-bottom: 2px solid white;
+            }
+          }
+        }
+      }
+    }
+
+    > footer {
+      padding-bottom: 20px;
+      padding-left: 40px;
+
+      > a {
+        color: white;
+        text-decoration: none;
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 25px;
+        line-height: 25px;
+      }
+    }
+  }
+}

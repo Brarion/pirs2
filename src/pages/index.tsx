@@ -1,13 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-// import { Inter } from 'next/font/google';
-import { Layout } from '@components';
 import { type GetBreakpoint, getBreakpoint } from '@utils/getBreakpoint';
 import { useBreakpoint } from '@utils/useBreakpoint';
 import { BreakpointContext } from '@utils/breakpointContext';
 
-// const inter = Inter({ subsets: ['latin'] });
+import { Layout, RCM, Wave } from '@components';
+
+import styles from './index.module.scss';
+import { useLocale } from '@utils/useLocale';
+import Image from 'next/image';
+import Phone from '@components/Layout/components/Top/components/Menu/components/BigMenu/assets/phone.png';
+import Mail from '@components/Layout/components/Top/components/Menu/components/BigMenu/assets/mail.png';
+import {
+  Form,
+  TextModal,
+} from '@components/Layout/components/Top/components/Menu/components/BigMenu/components';
+
 type Props = {
   serverBreakpoint: GetBreakpoint;
 };
@@ -27,7 +36,28 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 const Home: React.FC<
   InferGetServerSidePropsType<typeof getServerSideProps>
 > = ({ serverBreakpoint }) => {
+  const [textModal, setTextModal] = React.useState(false);
+  const [formOpened, setFormOpened] = React.useState(false);
+
   const breakpoint = useBreakpoint(serverBreakpoint);
+
+  const locale = useLocale();
+
+  const openTextModal = React.useCallback(() => {
+    setTextModal(true);
+  }, []);
+
+  const closeTextModal = React.useCallback(() => {
+    setTextModal(false);
+  }, []);
+
+  const openForm = React.useCallback(() => {
+    setFormOpened(true);
+  }, []);
+
+  const closeForm = React.useCallback(() => {
+    setFormOpened(false);
+  }, []);
 
   return (
     <>
@@ -40,8 +70,36 @@ const Home: React.FC<
       </Head>
       <BreakpointContext.Provider value={breakpoint}>
         <Layout>
-          <div>{breakpoint.isMobile ? 1 : 2}</div>
-          <div>{serverBreakpoint.isMobile ? 1 : 2}</div>
+          <div className={styles.main}>
+            <Wave />
+            <h1>{locale.main.title}</h1>
+          </div>
+          <RCM />
+          {formOpened && <Form close={closeForm} />}
+          {textModal && <TextModal close={closeTextModal} />}
+          <footer className={styles.footer}>
+            <div className={styles.fakeFooter} />
+            <div className={styles.grid}>
+              <div>
+                <div>
+                  <Image src={Phone} alt="88005553053" height={15} />
+                  <a href="tel:+78005553053">8 800 555 30 53</a>
+                </div>
+                <button onClick={openForm}>{locale.bigMenu.call.title}</button>
+              </div>
+              <div>
+                <p>{locale.bigMenu.text.title}</p>
+                <p>{locale.bigMenu.secure.title}</p>
+                <button onClick={openTextModal}>
+                  {locale.bigMenu.link.title}
+                </button>
+              </div>
+              <div>
+                <Image src={Mail} alt="rcm@reliab.tech" height={12} />
+                <a href="mailto:rcm@reliab.tech">rcm@reliab.tech</a>
+              </div>
+            </div>
+          </footer>
         </Layout>
       </BreakpointContext.Provider>
     </>

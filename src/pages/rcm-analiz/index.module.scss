@@ -1,0 +1,502 @@
+@import "@styles/media";
+
+.main {
+  height: 560px;
+  width: 100vw;
+
+  background-image: url("../../assets/analiz.jpeg");
+  background-size: cover;
+
+  @include tablet {
+    margin-left: calc(-1 * (100vw - 750px) / 2);
+    height: calc(100vw * 1500 / 2318);
+  }
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 970px) / 2);
+    height: calc(100vw * 1500 / 2318);
+  }
+
+  @include desktop2k {
+    margin-left: calc(-1 * (100vw - 1170px) / 2);
+    height: calc(100vw * 1500 / 2318 * 10 / 13);
+  }
+
+  > div {
+    position: absolute;
+    width: 100vw;
+    height: calc(100vw * 1500 / 2318);
+
+    .fake {
+      height: 560px;
+      background: rgba(0, 0, 0, 0.45);
+      width: 100%;
+      //opacity: 0.5;
+
+      @include tablet {
+        height: calc(100vw * 1500 / 2318);
+      }
+
+      @include desktop {
+        height: calc(100vw * 1500 / 2318);
+      }
+
+      @include desktop2k {
+        height: calc(100vw * 1500 / 2318 * 10 / 13);
+      }
+
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  > h1 {
+    position: absolute;
+    color: white;
+    font-family: 'SegoeUILight', Arial, 'PT Sans Caption', sans-serif;
+    font-size: 33px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0 15px;
+
+    left: 0;
+
+    width: 100%;
+    top: 150px;
+
+    @include tablet {
+      font-size: 38px;
+      line-height: 43px;
+      text-align: left;
+
+      width: 100%;
+
+      top: 200px;
+    }
+
+    @include desktop {
+      font-size: 41px;
+      line-height: 48px;
+      text-align: left;
+      width: auto;
+
+      top: 250px;
+    }
+
+    @include desktop2k {
+      font-size: 55px;
+      line-height: 61px;
+      text-align: left;
+      width: auto;
+
+      top: 250px;
+    }
+  }
+
+  > button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+
+    background-color: #004ea6;
+    transition: background-color 0.3s ease-in-out;
+
+    padding: 0 30px;
+    height: 59px;
+    border-radius: 30px;
+
+    position: absolute;
+
+    font-size: 17px;
+    line-height: 19px;
+    font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+
+    top: 450px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include tablet {
+      font-size: 17px;
+      line-height: 22px;
+      text-align: left;
+
+      top: 400px;
+    }
+
+    @include desktop {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+      width: auto;
+
+      top: 550px;
+    }
+
+    @include desktop2k {
+      font-size: 17px;
+      text-align: left;
+      width: auto;
+
+      top: 500px;
+    }
+
+    &:hover {
+      background-color: #003088
+    }
+  }
+
+  > h2 {
+    position: absolute;
+    color: #e8e8e8;
+    font-family: 'SegoeUILight', Arial, 'PT Sans Caption', sans-serif;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    padding: 0 15px;
+
+    left: 0;
+
+    width: 100%;
+    top: 250px;
+
+    @include tablet {
+      font-size: 17px;
+      line-height: 22px;
+      text-align: left;
+
+      width: 100%;
+
+      top: 300px;
+    }
+
+    @include desktop {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+      width: auto;
+
+      top: 350px;
+    }
+
+    @include desktop2k {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: left;
+      width: auto;
+
+      top: 350px;
+    }
+  }
+}
+
+.footer {
+  background-image: url("../../assets/footer.jpeg");
+
+  padding: 0 15px;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+
+  @include tablet {
+    margin-left: calc(-1 * (100vw - 750px) / 2);
+    padding: 0 calc((100vw - 750px) / 2);
+  }
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 970px) / 2);
+    padding: 0 calc((100vw - 970px) / 2);
+  }
+
+  @include desktop2k {
+    margin-left: calc(-1 * (100vw - 1170px) / 2);
+    padding: 0 calc((100vw - 1170px) / 2);
+  }
+
+  @include tablet {
+    height: 190px;
+  }
+
+  @include desktop {
+    height: 190px;
+  }
+
+  @include desktop2k {
+    height: 190px;
+  }
+
+  .fakeFooter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .grid {
+    position: relative;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-rows: max-content max-content max-content;
+    gap: 50px;
+
+    @include tablet {
+      padding: 40px 0;
+      grid-template-rows: 1fr;
+      grid-template-columns: max-content 1fr max-content;
+    }
+
+    @include desktop {
+      padding: 40px 0;
+      grid-template-rows: 1fr;
+      grid-template-columns: max-content 1fr max-content;
+    }
+
+    @include desktop2k {
+      padding: 40px 0;
+      grid-template-rows: 1fr;
+      grid-template-columns: max-content 1fr max-content;
+    }
+
+    > *:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        > a {
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 19px;
+          line-height: 19px;
+          cursor: pointer;
+
+          color: white;
+          text-decoration: none;
+        }
+      }
+
+      > button {
+        outline: none;
+        border: none;
+
+        color: white;
+        height: 43px;
+        padding: 0 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #0043a6;
+        cursor: pointer;
+        border-radius: 30px;
+
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 15px;
+        line-height: 15px;
+
+        &:hover {
+          background-color: #003088;
+        }
+      }
+    }
+
+    > *:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      > p {
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 14px;
+        line-height: 14px;
+
+        color: #cfcfcf;
+      }
+
+      > button {
+        outline: none;
+        border: none;
+
+        background-color: transparent;
+
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 14px;
+        line-height: 14px;
+
+        color: #cfcfcf;
+
+        border-bottom: 1px solid #cfcfcf;
+
+        width: max-content;
+
+        cursor: pointer;
+      }
+    }
+
+    > *:last-child {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      > a {
+        color: white;
+
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 15px;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
+.content {
+  background-size: cover;
+  padding: 80px 15px;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+  background-image: url("../../assets/background.jpeg");
+
+  @include tablet {
+    margin-left: calc(-1 * (100vw - 750px) / 2);
+    padding: 80px calc((100vw - 750px) / 2);
+  }
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 970px) / 2);
+    padding: 80px calc((100vw - 970px) / 2);
+  }
+
+  @include desktop2k {
+    margin-left: calc(-1 * (100vw - 1170px) / 2);
+    padding: 80px calc((100vw - 1170px) / 2);
+  }
+
+  > h1 {
+    font-family: 'SegoeUILight', Arial, 'PT Sans Caption', sans-serif;
+    font-size: 31px;
+    line-height: 37px;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+    @include tablet {
+      font-size: 33px;
+      line-height: 39px;
+    }
+
+    @include desktop {
+      font-size: 33px;
+      line-height: 39px;
+    }
+
+    @include desktop2k {
+      font-size: 41px;
+      line-height: 41px;
+    }
+  }
+
+  > div {
+    display: grid;
+    padding: 0 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    @include desktop2k {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    gap: 30px;
+
+    > div {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      gap: 30px;
+
+      > h2 {
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.partners {
+  background-image: url("../../assets/zavod.jpeg");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: cover;
+  min-height: 500px;
+
+  padding: 150px 15px;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+
+  @include tablet {
+    margin-left: calc(-1 * (100vw - 750px) / 2);
+    padding: 150px calc((100vw - 750px) / 2);
+  }
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 970px) / 2);
+    padding: 150px calc((100vw - 970px) / 2);
+  }
+
+  @include desktop2k {
+    margin-left: calc(-1 * (100vw - 1170px) / 2);
+    padding: 150px calc((100vw - 1170px) / 2);
+  }
+
+  .pFake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 30px);
+    margin-left: 7.5px;
+    height: 100%;
+    z-index: 2;
+
+    padding: 40px;
+
+    background-color: white;
+
+    > h2 {
+      font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}

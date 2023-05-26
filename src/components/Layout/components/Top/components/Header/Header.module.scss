@@ -1,11 +1,33 @@
+@import "@styles/media";
+
 .header {
   width: 100%;
-  height: 91px;
+  height: 64px;
+  box-sizing: border-box;
   padding: 0 15px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include tablet {
+    height: 90px;
+  }
+
+  @include desktop {
+    height: 90px;
+  }
+
+  @include desktop2k {
+    height: 90px;
+  }
+
+  > button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
 
   .rightSide {
     display: flex;
@@ -13,5 +35,152 @@
     align-items: center;
 
     gap: 30px;
+
+    > *:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+
+      > a {
+        text-decoration: none;
+        color: white;
+      }
+
+      > a:first-child {
+        font-size: 19px;
+        line-height: 19px;
+
+        @include desktop {
+          font-size: 23px;
+          line-height: 23px;
+        }
+      }
+
+      > a:last-child {
+        font-size: 12px;
+        line-height: 12px;
+        border-bottom: 1px solid #dedede;
+        transition: border-bottom-color .7s;;
+
+        &:hover {
+          border-bottom-color: #dedede00;
+        }
+
+        @include desktop {
+          font-size: 15px;
+          line-height: 15px;
+        }
+      }
+    }
+
+    > button {
+      outline: none;
+      border: none;
+      background-color: #004ea6;
+      border-radius: 100%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: background-color .3s;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: #003088;
+      }
+    }
+
+    > *:last-child {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      gap: 10px;
+
+      > button {
+        outline: none;
+        border: none;
+        color: white;
+
+        font-size: 20px;
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        background-color: transparent;
+
+        cursor: pointer;
+
+        &:hover {
+          color: #DDDDDD;
+          border-bottom: 2px solid white;
+        }
+
+        &.isActive {
+          border-bottom: 2px dotted white;
+
+          &:hover {
+            border-bottom: 2px solid white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  > button:first-child {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 100%;
+
+    outline: none;
+    border: none;
+
+    background-color: #004ea6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+
+    &:hover {
+      gap: 5px;
+    }
+
+    > * {
+      background-color: white;
+      width: 20px;
+      height: 2px;
+    }
+  }
+
+  > button:last-child {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 100%;
+
+    outline: none;
+    border: none;
+
+    background-color: #004ea6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
   }
 }

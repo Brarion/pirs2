@@ -1,0 +1,301 @@
+@import "@styles/media";
+
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+
+  background-color: rgba(49, 49, 49, 0.75);
+
+  > * {
+    @include tablet {
+      padding: 0 calc((100vw - 720px) / 2);
+      width: 720px;
+    }
+
+    @include desktop {
+      padding: 0 calc((100vw - 940px) / 2);
+      width: 940px;
+    }
+
+    @include desktop2k {
+      padding: 0 calc((100vw - 1140px) / 2);
+      width: 1140px;
+    }
+  }
+
+  > header {
+    background-color: rgba(0, 0, 0, .1);
+    height: 130px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100vw;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    @include tablet {
+      padding: 0 calc((100vw - 720px) / 2);
+      width: 720px;
+      box-sizing: content-box;
+    }
+
+    @include desktop {
+      padding: 0 calc((100vw - 940px) / 2);
+      width: 940px;
+      box-sizing: content-box;
+    }
+
+    @include desktop2k {
+      padding: 0 calc((100vw - 1140px) / 2);
+      width: 1140px;
+      box-sizing: content-box;
+    }
+
+    > button {
+      outline: none;
+      border: none;
+      width: 43px;
+      height: 43px;
+      background-color: transparent;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+
+  > main {
+    display: flex;
+    gap: 25px;
+
+    width: 100vw;
+    padding: 40px 20px 0;
+    box-sizing: border-box;
+
+    @include tablet {
+      padding: 40px calc((100vw - 720px) / 2) 0;
+      width: 720px;
+      box-sizing: content-box;
+      gap: 100px;
+    }
+
+    @include desktop {
+      padding: 40px calc((100vw - 940px) / 2) 0;
+      width: 940px;
+      box-sizing: content-box;
+      gap: 100px;
+    }
+
+    @include desktop2k {
+      padding: 40px calc((100vw - 1140px) / 2) 0;
+      width: 1140px;
+      box-sizing: content-box;
+      gap: 100px;
+    }
+
+    > div:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      > * {
+        color: white;
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 19px;
+        line-height: 19px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+
+    > div:last-child {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      > * {
+        color: white;
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 19px;
+        line-height: 19px;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:last-child {
+          margin-top: 20px;
+        }
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        > * {
+          color: white;
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 16px;
+          line-height: 16px;
+          text-decoration: none;
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+  > footer {
+    //height: 171px;
+
+    @include tablet {
+      height: 171px;
+    }
+
+    @include desktop {
+      height: 171px;
+    }
+
+    @include desktop2k {
+      height: 171px;
+    }
+
+    .divider {
+      height: 1px;
+      background-color: rgba(255, 255, 255, .3);
+      width: 100vw;
+
+      @include tablet {
+        margin: 0 calc(-1 * (100vw - 720px) / 2);
+      }
+
+      @include desktop {
+        margin: 0 calc(-1 * (100vw - 940px) / 2);
+      }
+
+      @include desktop2k {
+        margin: 0 calc(-1 * (100vw - 1140px) / 2);
+      }
+    }
+
+    .grid {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-rows: max-content max-content max-content;
+      gap: 50px;
+
+      @include tablet {
+        padding: 40px 0;
+        grid-template-columns: max-content 1fr max-content;
+      }
+
+      @include desktop {
+        padding: 40px 0;
+        grid-template-columns: max-content 1fr max-content;
+      }
+
+      @include desktop2k {
+        padding: 40px 0;
+        grid-template-columns: max-content 1fr max-content;
+      }
+
+      > *:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        > div {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          > a {
+            font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+            font-size: 19px;
+            line-height: 19px;
+            cursor: pointer;
+
+            color: white;
+            text-decoration: none;
+          }
+        }
+
+        > button {
+          outline: none;
+          border: none;
+
+          color: white;
+          height: 43px;
+          padding: 0 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: #0043a6;
+          cursor: pointer;
+          border-radius: 30px;
+
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 15px;
+          line-height: 15px;
+
+          &:hover {
+            background-color: #003088;
+          }
+        }
+      }
+
+      > *:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        > p {
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 14px;
+          line-height: 14px;
+
+          color: #cfcfcf;
+        }
+
+        > button {
+          outline: none;
+          border: none;
+
+          background-color: transparent;
+
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 14px;
+          line-height: 14px;
+
+          color: #cfcfcf;
+
+          border-bottom: 1px solid #cfcfcf;
+
+          width: max-content;
+
+          cursor: pointer;
+        }
+      }
+
+      > *:last-child {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        > a {
+          color: white;
+
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 15px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}

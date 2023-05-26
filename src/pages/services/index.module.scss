@@ -1,0 +1,381 @@
+@import "@styles/media";
+
+.main {
+  height: calc(100vw * 1080 / 1920);
+  width: 100vw;
+
+  @include tablet {
+    margin-left: calc(-1 * (100vw - 750px) / 2);
+  }
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 970px) / 2);
+  }
+
+  @include desktop2k {
+    margin-left: calc(-1 * (100vw - 1170px) / 2);
+  }
+
+  > div {
+    position: absolute;
+    width: 100vw;
+    height: calc(100vw * 1080 / 1920);
+
+    .fake {
+      background: rgba(0, 0, 0, 0.45);
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+
+      position: absolute;
+      left: 0;
+    }
+
+    > iframe {
+      width: 300%;
+      height: 100%;
+      margin-left: -100%;
+    }
+  }
+
+  > h1 {
+    position: absolute;
+    color: white;
+    font-family: 'SegoeUILight', Arial, 'PT Sans Caption', sans-serif;
+    font-size: 31px;
+    line-height: 37px;
+    text-align: center;
+
+    left: 0;
+
+    width: 100%;
+    top: 125px;
+
+    @include tablet {
+      font-size: 38px;
+      line-height: 43px;
+      left: calc((100vw - 750px) / 2);
+
+      width: 100%;
+
+      top: 250px;
+    }
+
+    @include desktop {
+      left: calc((100vw - 970px) / 2);
+      font-size: 41px;
+      line-height: 48px;
+      width: auto;
+
+      top: 300px;
+    }
+
+    @include desktop2k {
+      left: calc((100vw - 1170px) / 2);
+      font-size: 55px;
+      line-height: 61px;
+      width: auto;
+
+      top: 300px;
+    }
+  }
+}
+
+.footer {
+  background-image: url("../../assets/footer.jpeg");
+
+  padding: 0 15px;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+
+  @include tablet {
+    margin-left: calc(-1 * (100vw - 750px) / 2);
+    padding: 0 calc((100vw - 750px) / 2);
+  }
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 970px) / 2);
+    padding: 0 calc((100vw - 970px) / 2);
+  }
+
+  @include desktop2k {
+    margin-left: calc(-1 * (100vw - 1170px) / 2);
+    padding: 0 calc((100vw - 1170px) / 2);
+  }
+
+  @include tablet {
+    height: 190px;
+  }
+
+  @include desktop {
+    height: 190px;
+  }
+
+  @include desktop2k {
+    height: 190px;
+  }
+
+  .fakeFooter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .grid {
+    position: relative;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-rows: max-content max-content max-content;
+    gap: 50px;
+
+    @include tablet {
+      padding: 40px 0;
+      grid-template-rows: 1fr;
+      grid-template-columns: max-content 1fr max-content;
+    }
+
+    @include desktop {
+      padding: 40px 0;
+      grid-template-rows: 1fr;
+      grid-template-columns: max-content 1fr max-content;
+    }
+
+    @include desktop2k {
+      padding: 40px 0;
+      grid-template-rows: 1fr;
+      grid-template-columns: max-content 1fr max-content;
+    }
+
+    > *:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        > a {
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 19px;
+          line-height: 19px;
+          cursor: pointer;
+
+          color: white;
+          text-decoration: none;
+        }
+      }
+
+      > button {
+        outline: none;
+        border: none;
+
+        color: white;
+        height: 43px;
+        padding: 0 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #0043a6;
+        cursor: pointer;
+        border-radius: 30px;
+
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 15px;
+        line-height: 15px;
+
+        &:hover {
+          background-color: #003088;
+        }
+      }
+    }
+
+    > *:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      > p {
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 14px;
+        line-height: 14px;
+
+        color: #cfcfcf;
+      }
+
+      > button {
+        outline: none;
+        border: none;
+
+        background-color: transparent;
+
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 14px;
+        line-height: 14px;
+
+        color: #cfcfcf;
+
+        border-bottom: 1px solid #cfcfcf;
+
+        width: max-content;
+
+        cursor: pointer;
+      }
+    }
+
+    > *:last-child {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      > a {
+        color: white;
+
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 15px;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
+.content {
+  background-size: cover;
+  padding: 80px 15px;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+  background-image: url("../../assets/background.jpeg");
+
+  @include tablet {
+    margin-left: calc(-1 * (100vw - 750px) / 2);
+    padding: 80px calc((100vw - 750px) / 2);
+  }
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 970px) / 2);
+    padding: 80px calc((100vw - 970px) / 2);
+  }
+
+  @include desktop2k {
+    margin-left: calc(-1 * (100vw - 1170px) / 2);
+    padding: 80px calc((100vw - 1170px) / 2);
+  }
+
+  .list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 400px;
+    justify-content: center;
+    grid-template-rows: 263px 263px 263px 263px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 263px 263px;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 263px 263px;
+    }
+
+    @include desktop2k {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 263px 263px;
+    }
+
+    > *:nth-child(1) {
+      background-image: url("../../assets/product1.png");
+      background-size: cover;
+    }
+
+    > *:nth-child(2) {
+      background-image: url("../../assets/product2.jpeg");
+      background-size: cover;
+    }
+
+    > *:nth-child(3) {
+      background-image: url("../../assets/product3.jpeg");
+      background-size: cover;
+    }
+
+    > *:nth-child(4) {
+      background-image: url("../../assets/product4.png");
+      background-size: cover;
+    }
+
+    > * {
+      position: relative;
+
+      .fake {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../../assets/shadow.png") repeat-x left bottom;
+        z-index: 1;
+      }
+
+      .fake1 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: black;
+        opacity: 0.4;
+        z-index: 1;
+      }
+
+      > div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding: 25px;
+
+        > div {
+          > h1 {
+            color: white;
+            font-family: 'SegoeUIBold', Arial, 'PT Sans Caption', sans-serif;
+            font-size: 22px;
+            line-height: 26px;
+            margin-bottom: 5px;
+          }
+
+          > h2 {
+            color: white;
+            font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+            font-size: 15px;
+            line-height: 19px;
+          }
+        }
+
+        .a {
+          width: max-content;
+          color: white;
+          background-color: #004ea6;
+          text-decoration: none;
+          border-radius: 30px;
+          padding: 0 25px;
+          height: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

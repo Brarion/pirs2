@@ -4,9 +4,9 @@ const fs = require('fs');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp =
-    (relativePath) =>
-        (relativeSubpath = '') =>
-            path.resolve(appDirectory, relativePath, relativeSubpath);
+  (relativePath) =>
+  (relativeSubpath = '') =>
+    path.resolve(appDirectory, relativePath, relativeSubpath);
 
 const nextConfig = {
   reactStrictMode: true,
@@ -17,6 +17,10 @@ const nextConfig = {
     };
 
     return config;
+  },
+  i18n: {
+    locales: ['en', 'ru'],
+    defaultLocale: 'ru',
   },
 };
 

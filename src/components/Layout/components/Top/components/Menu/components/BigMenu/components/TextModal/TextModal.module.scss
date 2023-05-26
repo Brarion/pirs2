@@ -1,0 +1,126 @@
+@import "@styles/media";
+
+.textModal {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: black;
+
+  &.high {
+    z-index: 101;
+  }
+
+  .fake {
+    display: flex;
+    justify-content: center;
+
+    margin: 80px 15px 15px;
+
+    @include tablet {
+      margin: 30px 15px;
+    }
+
+    @include desktop {
+      margin: 30px 15px;
+    }
+
+    @include desktop2k {
+      margin: 30px 15px;
+    }
+
+    .textWrapper {
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+
+      background-color: white;
+      border-radius: 6px;
+
+      padding: 30px 37px 30px;
+
+      @include tablet {
+        width: 650px;
+      }
+
+      @include desktop {
+        width: 900px;
+      }
+
+      @include desktop2k {
+        width: 900px;
+      }
+
+      > h1 {
+        color: black;
+        font-family: 'SegoeUILight', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 33px;
+        line-height: 33px;
+
+        &:first-child {
+          margin: 0 0 25px 0;
+        }
+
+        margin: 40px 0 25px;
+      }
+
+      > p {
+        color: black;
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 16px;
+        line-height: 23px;
+        margin-bottom: 10px;
+
+        > a {
+          color: #2285c4;
+          text-decoration: none;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+
+      > button {
+        position: absolute;
+        right: 50%;
+        top: -59px;
+        width: 22px;
+
+        outline: none;
+        border: none;
+        background-color: transparent;
+
+        opacity: 0.8;
+
+        cursor: pointer;
+
+        @include tablet {
+          right: -40px;
+          width: 40px;
+          top: 0;
+        }
+
+        @include desktop {
+          right: -40px;
+          width: 40px;
+          top: 0;
+        }
+
+        @include desktop2k {
+          right: -40px;
+          width: 40px;
+          top: 0;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

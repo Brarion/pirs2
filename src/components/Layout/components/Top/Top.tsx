@@ -1,10 +1,15 @@
-import { Header, Menu } from './components';
+import { FakeComponent, Header, Menu } from './components';
+
+import styles from './Top.module.scss';
 
 const Top = () => {
   return (
     <>
-      <Header />
-      <Menu />
+      <FakeComponent />
+      <div className={styles.top}>
+        <Header />
+        <Menu />
+      </div>
     </>
   );
 };

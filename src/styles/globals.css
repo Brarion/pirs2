@@ -1,4 +1,28 @@
-html, body, a, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+@font-face {
+    font-family: "SegoeUIRegular";
+    src: url('../fonts/SegoeUIRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: "SegoeUILight";
+    src: url('../fonts/SegoeUILight.woff') format('woff');
+}
+
+@font-face {
+    font-family: "SegoeUIBold";
+    src: url('../fonts/SegoeUIBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: "concept";
+    src: url('../fonts/concept.woff2') format('woff2');
+}
+
+html, body, a, h1, h2, h3, h4, h5, h6, button, main, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
 }

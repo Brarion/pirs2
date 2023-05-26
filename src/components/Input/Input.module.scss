@@ -1,0 +1,35 @@
+
+.inputWrapper {
+  height: 54px;
+  box-sizing: border-box;
+  position: relative;
+
+  .input {
+    height: 54px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 12px;
+
+    color: #181818;
+    border: 2px solid #d5d5d5;
+
+    font-size: 16px;
+    line-height: 17px;
+
+    font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+
+    outline: none;
+
+    &.error {
+      border-color: #a94242;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
+}

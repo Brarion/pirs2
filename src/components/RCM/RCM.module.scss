@@ -1,0 +1,580 @@
+@import "@styles/media";
+
+.rcm {
+  background-size: cover;
+  padding: 80px 15px;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+  background-image: url("../../assets/background.jpeg");
+
+  @include tablet {
+    margin-left: calc(-1 * (100vw - 750px) / 2);
+    padding: 80px calc((100vw - 750px) / 2);
+  }
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 970px) / 2);
+    padding: 80px calc((100vw - 970px) / 2);
+  }
+
+  @include desktop2k {
+    margin-left: calc(-1 * (100vw - 1170px) / 2);
+    padding: 80px calc((100vw - 1170px) / 2);
+  }
+
+  > h1 {
+    color: black;
+    text-align: center;
+    font-family: 'SegoeUILight', Arial, 'PT Sans Caption', sans-serif;
+    font-size: 31px;
+    line-height: 37px;
+    margin-bottom: 10px;
+
+    &.margin {
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      font-size: 38px;
+      line-height: 43px;
+    }
+
+    @include desktop {
+      font-size: 41px;
+      line-height: 48px;
+    }
+
+    @include desktop2k {
+      font-size: 49px;
+      line-height: 59px;
+    }
+  }
+
+  > h2 {
+    color: #5d5d5d;
+    text-align: center;
+    font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+    font-size: 19px;
+    line-height: 23px;
+    margin-bottom: 60px;
+
+    @include tablet {
+      font-size: 17px;
+      line-height: 22px;
+    }
+
+    @include desktop {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include desktop2k {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  > h3 {
+    color: black;
+    text-align: left;
+    font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 10px;
+  }
+
+  .photo {
+    width: 100%;
+    max-width: 1080px;
+    height: calc(100% * 1555px / 1080px);
+    max-height: 1555px;
+
+    margin: 0 auto;
+
+    > img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+}
+
+.carouselWrapper {
+  background-color: #005a80;
+  width: 100vw;
+  padding: 80px 40px;
+
+  @include tablet {
+    margin: 0 calc(-1 * (100vw - 720px) / 2);
+    padding: 80px calc((100vw - 720px) / 2);
+  }
+
+  @include desktop {
+    margin: 0 calc(-1 * (100vw - 940px) / 2);
+    padding: 80px calc((100vw - 940px) / 2);
+  }
+
+  @include desktop2k {
+    margin: 0 calc(-1 * (100vw - 1140px) / 2);
+    padding: 80px calc((100vw - 1140px) / 2);
+  }
+
+  .carousel {
+
+    > *:nth-child(1) {
+      bottom: -60px;
+    }
+
+    > *:nth-child(2) {
+      padding: 0;
+
+      @include tablet {
+        padding: 0;
+      }
+
+      @include desktop {
+        padding: 0 119px;
+      }
+
+      @include desktop2k {
+        padding: 0 119px;
+      }
+    }
+
+    > *:nth-child(3) {
+      left: -40px;
+
+      @include tablet {
+        left: 0;
+      }
+
+      @include desktop {
+        left: 0;
+      }
+
+      @include desktop2k {
+        left: -80px;
+      }
+    }
+
+    > *:nth-child(4) {
+      right: -40px;
+
+      @include tablet {
+        right: 0;
+      }
+
+      @include desktop {
+        right: 0;
+      }
+
+      @include desktop2k {
+        right: -80px;
+      }
+    }
+  }
+}
+
+.next {
+  transform: rotateY(180deg);
+}
+
+.item1 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  > * {
+    height: 304px;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  > *:nth-child(1) {
+    background-image: url("./assets/1.png");
+  }
+
+  > *:nth-child(2) {
+    background-image: url("./assets/2.png");
+  }
+
+  > *:nth-child(3) {
+    background-image: url("./assets/3.png");
+  }
+}
+
+.item2 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  > * {
+    height: 304px;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  > *:nth-child(1) {
+    background-image: url("./assets/4.png");
+  }
+
+  > *:nth-child(2) {
+    background-image: url("./assets/5.png");
+  }
+
+  > *:nth-child(3) {
+    background-image: url("./assets/6.png");
+  }
+}
+
+.item3 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  > * {
+    height: 304px;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  > *:nth-child(1) {
+    background-image: url("./assets/7.png");
+  }
+
+  > *:nth-child(2) {
+    background-image: url("./assets/8.png");
+  }
+
+  > *:nth-child(3) {
+    background-image: url("./assets/9.png");
+  }
+}
+
+.item4 > div > * {
+  height: 304px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/1.png");
+}
+
+.item5 > div > * {
+  height: 304px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/2.png");
+}
+
+.item6 > div > * {
+  height: 304px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/3.png");
+}
+
+.item7 > div > * {
+  height: 304px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/4.png");
+}
+
+.item8 > div > * {
+  height: 304px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/5.png");
+}
+
+.item9 > div > * {
+  height: 304px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/6.png");
+}
+
+.item10 > div > * {
+  height: 304px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/7.png");
+}
+
+.item11 > div > * {
+  height: 304px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/8.png");
+}
+
+.item12 > div > * {
+  height: 304px;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/9.png");
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 400px;
+  justify-content: center;
+  grid-template-rows: 263px 263px 263px 263px;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 263px 263px;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 263px 263px;
+  }
+
+  @include desktop2k {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 263px 263px;
+  }
+
+  > *:nth-child(1) {
+    background-image: url("../../assets/product1.png");
+    background-size: cover;
+  }
+
+  > *:nth-child(2) {
+    background-image: url("../../assets/product2.jpeg");
+    background-size: cover;
+  }
+
+  > *:nth-child(3) {
+    background-image: url("../../assets/product3.jpeg");
+    background-size: cover;
+  }
+
+  > *:nth-child(4) {
+    background-image: url("../../assets/product4.png");
+    background-size: cover;
+  }
+
+  > * {
+    position: relative;
+
+    .fake {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("../../assets/shadow.png") repeat-x left bottom;
+      z-index: 1;
+    }
+
+    .fake1 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    > div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      padding: 25px;
+
+      > div {
+        > h1 {
+          color: white;
+          font-family: 'SegoeUIBold', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 22px;
+          line-height: 26px;
+          margin-bottom: 5px;
+        }
+
+        > h2 {
+          color: white;
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 15px;
+          line-height: 19px;
+        }
+      }
+
+      .a {
+        width: max-content;
+        color: white;
+        background-color: #004ea6;
+        text-decoration: none;
+        border-radius: 30px;
+        padding: 0 25px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.partners {
+  background-image: url("./assets/back123.jpeg");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: cover;
+  min-height: 643px;
+
+  padding: 80px 15px;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+
+  @include tablet {
+    margin-left: calc(-1 * (100vw - 750px) / 2);
+    padding: 80px calc((100vw - 750px) / 2);
+  }
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 970px) / 2);
+    padding: 80px calc((100vw - 970px) / 2);
+  }
+
+  @include desktop2k {
+    margin-left: calc(-1 * (100vw - 1170px) / 2);
+    padding: 80px calc((100vw - 1170px) / 2);
+  }
+
+  .pFake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    > h1 {
+      color: white;
+      text-align: center;
+      font-family: 'SegoeUILight', Arial, 'PT Sans Caption', sans-serif;
+      font-size: 31px;
+      line-height: 37px;
+      margin-bottom: 60px;
+
+      @include tablet {
+        font-size: 38px;
+        line-height: 43px;
+      }
+
+      @include desktop {
+        font-size: 41px;
+        line-height: 48px;
+      }
+
+      @include desktop2k {
+        font-size: 49px;
+        line-height: 59px;
+      }
+    }
+
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+
+      >* {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 172px;
+
+        @include tablet {
+          width: 50%;
+        }
+
+        @include desktop {
+          width: 33.33%;
+        }
+
+        @include desktop2k {
+          width: 33.33%;
+        }
+
+        > *:first-child {
+          margin-bottom: 20px;
+        }
+
+        > p {
+          text-align: center;
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          color: white;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+
+      >*:nth-child(4) {
+        @include desktop {
+          margin-left: 16.66%;
+        }
+
+        @include desktop2k {
+          margin-left: 16.66%;
+        }
+      }
+
+      >*:nth-child(5) {
+        @include desktop {
+          margin-right: 16.66%;
+        }
+
+        @include desktop2k {
+          margin-right: 16.66%;
+        }
+      }
+
+    }
+  }
+}

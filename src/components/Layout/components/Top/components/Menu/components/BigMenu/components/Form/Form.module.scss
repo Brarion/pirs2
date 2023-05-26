@@ -1,0 +1,207 @@
+@import "@styles/media";
+
+.textModal {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.high {
+    z-index: 100;
+  }
+
+  background-color: black;
+
+  .fake {
+    display: flex;
+    justify-content: center;
+
+    margin: 80px 15px 15px;
+
+    @include tablet {
+      margin: 30px 15px;
+    }
+
+    @include desktop {
+      margin: 30px 15px;
+    }
+
+    @include desktop2k {
+      margin: 30px 15px;
+    }
+
+    .textWrapper {
+      position: relative;
+      width: 366px;
+      box-sizing: border-box;
+
+      background-color: #f6f6ef;
+
+      padding: 30px 25px;
+
+      @include tablet {
+        width: 366px;
+      }
+
+      @include desktop {
+        width: 366px;
+      }
+
+      @include desktop2k {
+        width: 366px;
+      }
+
+      > h1 {
+        color: #181818;
+        font-family: 'SegoeUILight', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 21px;
+        line-height: 21px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      > h2 {
+        color: #8c8c8c;
+        font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+        font-size: 14px;
+        line-height: 14px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .btn {
+          color: white;
+
+          font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+          font-size: 17px;
+          line-height: 17px;
+          background-color: #004ea6;
+          width: 100%;
+          height: 59px;
+          outline: none;
+          border: none;
+          border-radius: 30px;
+
+          cursor: pointer;
+
+          transition: background-color 0.7s ease-in-out;
+
+
+          &:hover {
+            background-color: #003088;
+          }
+        }
+
+        .checkbox {
+          position: relative;
+
+          cursor: pointer;
+
+          border: none;
+          outline: none;
+          background-color: transparent;
+
+          &.error > *:first-child {
+            width: 15px;
+            height: 15px;
+            min-width: 15px;
+            box-sizing: border-box;
+            border: 2px solid #a94242;
+            border-radius: 2px;
+          }
+
+          > *:first-child {
+            position: relative;
+            width: 15px;
+            height: 15px;
+            min-width: 15px;
+            overflow: hidden;
+            margin: 0;
+
+            > * {
+              position: absolute;
+
+              top: 0;
+              left: 0;
+            }
+
+            &.checked > * {
+              top: initial;
+              bottom: 0;
+            }
+
+          }
+        }
+
+        .checkbox {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          cursor: pointer;
+
+          > label {
+            color: #8c8c8c;
+            font-family: 'SegoeUIRegular', Arial, 'PT Sans Caption', sans-serif;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: left;
+
+            cursor: pointer;
+
+            > *:last-child {
+              color: #2285c4
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  right: 50%;
+  top: -59px;
+  width: 22px;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
+
+  opacity: 0.8;
+
+  cursor: pointer;
+
+  @include tablet {
+    right: -40px;
+    width: 40px;
+    top: 0;
+  }
+
+  @include desktop {
+    right: -40px;
+    width: 40px;
+    top: 0;
+  }
+
+  @include desktop2k {
+    right: -40px;
+    width: 40px;
+    top: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
