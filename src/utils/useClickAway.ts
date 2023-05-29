@@ -5,7 +5,7 @@ export const useClickAway = (
   handler: (value: boolean) => void
 ) => {
   const handleOutsideClick = React.useCallback(
-    (e) => {
+    (e: any) => {
       if (ref && ref.current !== null && !ref.current.contains(e.target)) {
         handler(false);
       }
